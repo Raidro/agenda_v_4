@@ -1,4 +1,4 @@
-package br.senac.rn.agendav4;
+package br.senac.rn.agenda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
