@@ -2,10 +2,9 @@ package br.senac.rn.agenda.model;
 
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-import javax.persistence.Table;
+
 import java.util.Objects;
 
 @Entity
@@ -13,10 +12,16 @@ import java.util.Objects;
 public class Contato {
 
     @Id
-
+    @Column(name = "con_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "con_nome", nullable = false)
     private String nome;
+
+    @Column(name = "con_fone", nullable = false)
     private String fone;
+
 
     public Long getId() {
         return id;
