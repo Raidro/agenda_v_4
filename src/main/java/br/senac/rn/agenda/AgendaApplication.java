@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class AgendaApplication implements CommandLineRunner {
+public class AgendaApplication{
 
 	public static void main(String[] args) {
 
@@ -18,11 +18,11 @@ public class AgendaApplication implements CommandLineRunner {
 
 	}
 
-	@Autowired
-	ContatoRepository repository;
-
-	@Override
-	public void run(String... args) throws Exception {
+//	@Autowired
+//	ContatoRepository repository;
+//
+//	@Override
+//	public void run(String... args) throws Exception {
 //		Contato mateus = new Contato();
 //
 //		mateus.setNome("Mateus Sátiro");
@@ -35,11 +35,12 @@ public class AgendaApplication implements CommandLineRunner {
 //
 //		repository.save(mateus);
 //		repository.save(felipe);
+//
+//		for ( Contato c : repository.findByFonePart("19192")){
+//			System.out.println(c.getNome());
+//		}
+//
+//
+//	}
 
-		for ( Contato c : repository.findByFonePart("19192")){
-			System.out.println(c.getNome());
-		}
-
-
-	}
 }
