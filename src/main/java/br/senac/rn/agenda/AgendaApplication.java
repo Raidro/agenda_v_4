@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+
 @SpringBootApplication
 public class AgendaApplication implements CommandLineRunner {
 
@@ -21,18 +23,22 @@ public class AgendaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Contato mateus = new Contato();
+//		Contato mateus = new Contato();
+//
+//		mateus.setNome("Mateus Sátiro");
+//		mateus.setFone("19192-2323");
+//
+//		Contato felipe = new Contato();
+//
+//		felipe.setNome("Felipe Vasco");
+//		felipe.setFone("15158-9595");
+//
+//		repository.save(mateus);
+//		repository.save(felipe);
 
-		mateus.setNome("Mateus Sátiro");
-		mateus.setFone("19192-2323");
-
-		Contato felipe = new Contato();
-
-		felipe.setFone("Felipe Vasco");
-		felipe.setFone("15158-9595");
-
-		repository.save(mateus);
-		repository.save(felipe);
+		for ( Contato c : repository.findByFone("19192-2323")){
+			System.out.println(c.getNome());
+		}
 
 
 	}
