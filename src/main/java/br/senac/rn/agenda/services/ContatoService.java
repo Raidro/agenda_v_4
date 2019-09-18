@@ -14,11 +14,11 @@ public class ContatoService {
     @Autowired
     private ContatoRepository repository;
 
-    public List<Contato> findAll() {
+    public List<Contato> listaTodos() {
         return repository.findAll();
     }
 
-    public Contato save(Contato entity) {
+    public Contato salva(Contato entity) {
         return repository.save(entity);
     }
 }
