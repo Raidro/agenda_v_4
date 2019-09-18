@@ -10,7 +10,7 @@ public class ContatoController {
     @Autowired
     private ContatoService service;
 
-    @GetMapping("/")
+    @GetMapping("/contato")
     public String helloWorld(){
         return "index";
     }
