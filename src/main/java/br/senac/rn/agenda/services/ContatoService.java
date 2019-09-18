@@ -19,6 +19,7 @@ public class ContatoService {
     }
 
     public Contato salva(Contato entity) {
+
         return repository.save(entity);
     }
 }
