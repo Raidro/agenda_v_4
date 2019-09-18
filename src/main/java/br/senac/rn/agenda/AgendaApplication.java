@@ -36,7 +36,7 @@ public class AgendaApplication implements CommandLineRunner {
 //		repository.save(mateus);
 //		repository.save(felipe);
 
-		for ( Contato c : repository.findByFone("19192-2323")){
+		for ( Contato c : repository.findByFonePart("19192")){
 			System.out.println(c.getNome());
 		}
 
