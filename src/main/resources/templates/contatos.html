@@ -23,28 +23,41 @@
     <div class="container" style="margin-top: 50px">
         <div class="row">
             <div class="col-6">
-                <!--Inicio da tabela-->
-                <table>
-                    <tr th:each="contatos : ${contatos}">
-                        <th th:text="${contatos.id}"></th>
-                        <th th:text="${contatos.nome}"></th>
-                        <th th:text="${contatos.fone}"></th>
-                    </tr>
-                </table>
+
             </div>
-            <!-- final da tabela -->
+
 
             <div class="col-6">
+                <!--Inicio da tabela-->
+                <table class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Fone</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="contatos : ${contatos}">
+                            <th th:text="${contatos.id}"></th>
+                            <th th:text="${contatos.nome}"></th>
+                            <th th:text="${contatos.fone}"></th>
+                        </tr>
+                    </tbody>
 
 
+                </table>
+                <!-- final da tabela -->
             </div>
         </div>
     </div>
 
 
- 
 
-    
+
+
 
 
 </body>
