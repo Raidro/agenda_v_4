@@ -10,11 +10,11 @@
 </head>
 <body>
     
-    <table>
-        <tr th:each="">
-            <th></th>
-            <th></th>
-            <th></th>
+    <table border="1">
+        <tr th:each="contatos : ${contatos}">
+            <th th:text="${contatos.id}"></th>
+            <th th:text="${contatos.nome}"></th>
+            <th th:text="${contatos.fone}"></th>
         </tr>
     </table>
 
