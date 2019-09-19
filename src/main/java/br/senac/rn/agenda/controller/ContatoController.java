@@ -22,6 +22,8 @@ public class ContatoController {
 
     @GetMapping
     public String listaTodos(Model model){
+        Contato contato = new Contato();
+        model.addAttribute("contato", contato);
         List<Contato>contatos = service.listaTodos();
         model.addAttribute("contatos",contatos);
         return "contatos";
@@ -30,7 +32,7 @@ public class ContatoController {
     @PostMapping
     public String salva(Contato contato){
         service.salva(contato);
-        return "contato";
+        return "redirect:/contatos";
     }
 
 
