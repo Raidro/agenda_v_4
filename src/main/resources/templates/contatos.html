@@ -15,12 +15,24 @@
 
     <div class="container" style="margin-top: 50px">
         <div class="row">
-            <!--Inicio da tabela FORMULARIO-->
+         <!--Inicio da tabela FORMULARIO-->
             <div class="col-6">
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" class="form-control">
-                </div>
+
+                    <form method="post" th:object="${contato}" th:action="@{/contatos}">
+                        <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" class="form-control">
+                            </div>
+
+
+
+
+
+                            
+                        </form>
+
+
+                
 
                 <div class="form-group">
                     <label for="fone">Telefone</label>
