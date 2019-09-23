@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-6">
                 <form method="post" th:object="${contato}" th:action="@{/contatos}">
-
+                    <input type="hidden" th:field="*{id}">
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" th:field="*{nome}" class="form-control">
@@ -53,19 +53,26 @@
                             <th>#</th>
                             <th>Nome</th>
                             <th>Fone</th>
-                            <th colspan="2" style="text-align:center">Ação</th>
+                            <th style="text-align:center">Ação</th>
                         </tr>
 
                     </thead>
 
                     <tbody>
                         <tr th:each="contatos : ${contatos}">
-                            <th th:text="${contatos.id}"></th>
-                            <th th:text="${contatos.nome}"></th>
-                            <th th:text="${contatos.fone}"></th>
-                            <th><button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button></th>
-                            <th><button type="button" class="btn btn-danger"><i class="fas fa-trash"></button></th>
+                            <td th:text="${contatos.id}"></td>
+                            <td th:text="${contatos.nome}"></td>
+                            <td th:text="${contatos.fone}"></td>
+                            <td>
+                                <a class="btn btn-info" th:href="@{/contatos/{id}/edita(id=${contato.id})}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                            
+                                <a class="btn btn-danger" th:href="@{/contatos/{id}/remove(id=${contato.id})}">
+                                    <i class="fas fa-trash"></i>
+                                </a>
 
+                            </td>
                         </tr>
                     </tbody>
 

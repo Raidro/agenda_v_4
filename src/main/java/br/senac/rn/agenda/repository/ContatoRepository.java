@@ -9,10 +9,4 @@ import java.util.List;
 
 public interface ContatoRepository  extends JpaRepository<Contato, Long> {
 
-
-//    List<Contato> findByFone(String fone);
-//
-//    @Query("FROM Contato c WHERE c.fone like %:fone%")
-//    List<Contato> findByFonePart(@Param("fone") String fone);
-
 }
