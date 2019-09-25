@@ -59,10 +59,10 @@
                     </thead>
 
                     <tbody>
-                        <tr th:each="contatos : ${contatos}">
-                            <td th:text="${contatos.id}"></td>
-                            <td th:text="${contatos.nome}"></td>
-                            <td th:text="${contatos.fone}"></td>
+                        <tr th:each="contato : ${contatos}">
+                            <td th:text="${contato.id}"></td>
+                            <td th:text="${contato.nome}"></td>
+                            <td th:text="${contato.fone}"></td>
                             <td>
                                 <a class="btn btn-info" th:href="@{/contatos/{id}/edita(id=${contato.id})}">
                                     <i class="fas fa-edit"></i>
@@ -71,7 +71,6 @@
                                 <a class="btn btn-danger" th:href="@{/contatos/{id}/remove(id=${contato.id})}">
                                     <i class="fas fa-trash"></i>
                                 </a>
-
                             </td>
                         </tr>
                     </tbody>
