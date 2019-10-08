@@ -1,10 +1,6 @@
 package br.senac.rn.agenda.model;
 
-
-
 import javax.persistence.*;
-
-
 import java.util.Objects;
 
 @Entity
@@ -13,7 +9,8 @@ public class Contato {
 
     @Id
     @Column(name = "con_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "tb_contatos_id_sequence", sequenceName = "tb_contatos_id_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tb_contatos_id_sequences")
     private Long id;
 
     @Column(name = "con_nome", nullable = false)
@@ -21,7 +18,6 @@ public class Contato {
 
     @Column(name = "con_fone", nullable = false)
     private String fone;
-
 
     public Long getId() {
         return id;
