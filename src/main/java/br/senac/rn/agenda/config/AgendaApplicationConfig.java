@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class AgendaApplicationConfig  implements WebMvcConfigurer {
 
     public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("GET", "POST");
+        registry.addMapping("/**").allowedOrigins("https://a9261456-agenda-front.herokuapp.com/").allowedMethods("GET", "POST");
     }
 
 }
